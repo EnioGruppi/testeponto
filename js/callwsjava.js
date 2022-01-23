@@ -40,7 +40,7 @@ function checkLogin()  {
             request.send(sopa);
             const text = xhttp.responseText; //API response in XML
             const parser = new DOMParser();
-            const xmlDOM = parser.parseFromString("text","text/xml");
+            const xmlDOM = parser.parseFromString(text,"text/xml");
             const value = xmlDOM.getElementsByTagName("resultado")[0].childNodes[0].nodeValue;
     }
     else
