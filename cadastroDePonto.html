@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="js/inputs.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <img src="img/clock.png " height="40">
+              <form class="d-flex">
+                <input class="form-control me-2" type="data">
+                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+              </form>
+            </div>
+          </nav>
+        <div class="col-md-12 ">     
+            <form id="cadastro" action="cadastroDePonto.html" method="post">
+                <div class="form-group form-group">
+                    <label for="data">Dia</label>
+                    <input type="date" id="dia" class="form-control" id="data">
+                </div>
+                <div class="form-group form-group-lg">
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" id="descricao" rows="3"></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="button" id="enviar" class="btn btn-primary" onclick="salvardescricao()">Enviar</button>
+                </div>
+            </form>
+        </div>   
+    </body>
+</html>
