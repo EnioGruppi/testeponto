@@ -37,11 +37,6 @@ function checkLogin()  {
 
     if (xhttp.status == 0) {
         console.log("url chamada corretamente");
-            request.send(sopa);
-            const text = xhttp.response; //API response in XML
-            const parser = new DOMParser();
-            const xmlDOM = parser.parseFromString(text,"text/xml");
-            const value = xmlDOM.getElementsByTagName("resultado")[0].childNodes[0].nodeValue;
     }
     else
     {
@@ -51,6 +46,11 @@ function checkLogin()  {
    
     // xhttp.overrideMimeType("text/xml");
     //xhttp.responseType = 'document';
+    request.send(sopa);
+    const text = xhttp.responseText; //API response in XML
+    const parser = new DOMParser();
+    const xmlDOM = parser.parseFromString(text,"text/xml");
+    const value = xmlDOM.getElementsByTagName("resultado")[0].childNodes[0].nodeValue;
     
     return value;
 }
