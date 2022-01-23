@@ -1,13 +1,13 @@
 function checkLogin()  {
-    var sopa = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://weblogin.br.com/">'+
+    var sopa = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsj="http://wsjava/">'+
     '<soapenv:Header/>'+
     '<soapenv:Body>'+
-    '<web:checkLogin>'+
-        '<userName>admin</userName>'+
-        '<password>abc</password>'+
-    '</web:checkLogin>'+
+       '<wsj:checkLogin>'+
+          '<userName>admin</userName>'+
+          '<password>admin</password>'+
+       '</wsj:checkLogin>'+
     '</soapenv:Body>'+
-    '</soapenv:Envelope>';
+ '</soapenv:Envelope>';
     const url = 'https://servicejava.herokuapp.com/service-0.0.1-SNAPSHOT-jar-with-dependencies/service?wsdl';
     //var request;
     //const url = 'https://GOOGLE.COM.BR';
