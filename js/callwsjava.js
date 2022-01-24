@@ -35,7 +35,7 @@ function checkLogin()  {
 
    
 
-    if (xhttp.status == 200 || xhttp.status == 200) {
+    if (xhttp.status == 200 || xhttp.status == 0) {
         console.log("url chamada corretamente" + xhttp.status);
     }
     else
