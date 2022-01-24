@@ -22,8 +22,8 @@ function checkLogin()  {
     
     let headers = new Headers();
 
-    headers.append('Content-Type', 'text/xml');
-    headers.append('Accept', 'text/xml');
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
 
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Headers', 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type');
