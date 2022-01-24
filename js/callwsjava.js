@@ -15,7 +15,7 @@ function checkLogin()  {
     const xhttp = new XMLHttpRequest();
     //xhttp.setRequestHeader("Content-Type: application/xml", "Authorization: Basic //AuthKey");
     xhttp.open('POST', url, false);
-    xhttp.setRequestHeader("Content-type","text/xml; charset=UTF-8")
+   // xhttp.setRequestHeader("Content-type","text/xml; charset=UTF-8")
     //xhttp.timeout = 4000;
     //xhttp.ontimeout = function () { alert("Timed out!!!"); }
    
