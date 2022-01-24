@@ -15,14 +15,14 @@ function checkLogin()  {
     const xhttp = new XMLHttpRequest();
     //xhttp.setRequestHeader("Content-Type: application/xml", "Authorization: Basic //AuthKey");
     xhttp.open('POST', url, false);
-   // xhttp.setRequestHeader("Content-type","text/xml; charset=UTF-8")
+    xhttp.setRequestHeader("Content-type","text/xml; charset=UTF-8")
     //xhttp.timeout = 4000;
     //xhttp.ontimeout = function () { alert("Timed out!!!"); }
    
-    
+    /*
     let headers = new Headers();
 
-    headers.append('Content-Type', 'text/xml; charset=UTF-8');
+    //headers.append('Content-Type', 'text/xml; charset=UTF-8');
     headers.append('Accept', '/');
     headers.append('Accept-Encoding', 'gzip, deflate, br');
     headers.append('Access-Control-Allow-Origin', '*');
@@ -31,8 +31,7 @@ function checkLogin()  {
     headers.append('Content-Length', sopa.length);
     headers.append('Access-Control-Max-Age', 3600)
     headers.append('GET', 'POST', 'OPTIONS');
-    console.log(xhttp.status);
-
+    console.log(xhttp.status);*/
    
 
     if (xhttp.status == 200 || xhttp.status == 0) {
