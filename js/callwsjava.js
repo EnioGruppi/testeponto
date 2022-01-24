@@ -24,7 +24,7 @@ function checkLogin()  {
 
     headers.append('Content-Type', 'text/xml');
     headers.append('Accept', '*/*');
-    eaders.append('Accept-Encoding', 'gzip, deflate, br');
+    headers.append('Accept-Encoding', 'gzip, deflate, br');
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Headers', 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type');
     headers.append('Access-Control-Allow-Credentials', 'true');
