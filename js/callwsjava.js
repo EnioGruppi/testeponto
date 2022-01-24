@@ -15,16 +15,15 @@ function checkLogin()  {
     const xhttp = new XMLHttpRequest();
     //xhttp.setRequestHeader("Content-Type: application/xml", "Authorization: Basic //AuthKey");
     xhttp.open('POST', url, false);
-    xhttp.setRequestHeader('Content-Type', 'text/plain');
     //xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=UTF-8");
     //xhttp.timeout = 4000;
     //xhttp.ontimeout = function () { alert("Timed out!!!"); }
    
-    /*
+    
     let headers = new Headers();
 
-    headers.append('Content-Type', 'text/plain');
-    headers.append('Accept', 'text/plain');
+    headers.append('Content-Type', 'application/soap+xml');
+    headers.append('Accept', 'application/soap+xml');
 
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Headers', 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type');
@@ -34,7 +33,7 @@ function checkLogin()  {
     headers.append('GET', 'POST', 'OPTIONS');
     console.log(xhttp.status);
 
-   */
+   
 
     if (xhttp.status == 200 || xhttp.status == 0) {
         console.log("url chamada corretamente" + xhttp.status);
@@ -50,7 +49,7 @@ function checkLogin()  {
     xhttp.send(sopa);
     const text = xhttp.responseText; //API response in XML
     const parser = new DOMParser();
-    const xmlDOM = parser.parseFromString(text,"text/plain");
+    const xmlDOM = parser.parseFromString(text,"application/soap+xml");
     const value = xmlDOM.getElementsByTagName("resultado")[0].childNodes[0].nodeValue;
     
     return value;
