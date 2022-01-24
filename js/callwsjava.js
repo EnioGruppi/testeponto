@@ -4,7 +4,7 @@ function checkLogin()  {
     '<soapenv:Body>'+
        '<wsj:checkLogin>'+
           '<userName>admin</userName>'+
-          '<password>admin</password>'+
+          '<password>ABC</password>'+
        '</wsj:checkLogin>'+
     '</soapenv:Body>'+
  '</soapenv:Envelope>';
@@ -20,10 +20,10 @@ function checkLogin()  {
     //xhttp.ontimeout = function () { alert("Timed out!!!"); }
    
     
-   /* let headers = new Headers();
+    let headers = new Headers();
 
-    headers.append('Content-Type', 'application/xml');
-    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'text/xml');
+    headers.append('Accept', 'text/xml');
 
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Headers', 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type');
@@ -31,7 +31,7 @@ function checkLogin()  {
     headers.append('Content-Length', sopa.length);
     headers.append('Access-Control-Max-Age', 3600)
     headers.append('GET', 'POST', 'OPTIONS');
-    console.log(xhttp.status);*/
+    console.log(xhttp.status);
 
    
 
