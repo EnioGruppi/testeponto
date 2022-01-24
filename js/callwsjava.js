@@ -22,8 +22,8 @@ function checkLogin()  {
     
     let headers = new Headers();
 
-    headers.append('Content-Type', 'application/json');
-    headers.append('Accept', 'application/json');
+    headers.append('Content-Type', 'application/xml');
+    headers.append('Accept', 'application/xml');
 
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Headers', 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type');
@@ -49,7 +49,7 @@ function checkLogin()  {
     xhttp.send(sopa);
     const text = xhttp.responseText; //API response in XML
     const parser = new DOMParser();
-    const xmlDOM = parser.parseFromString(text,"text/xml");
+    const xmlDOM = parser.parseFromString(text,"application/xml");
     const value = xmlDOM.getElementsByTagName("resultado")[0].childNodes[0].nodeValue;
     
     return value;
