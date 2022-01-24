@@ -35,8 +35,8 @@ function checkLogin()  {
 
    
 
-    if (xhttp.status == 0) {
-        console.log("url chamada corretamente");
+    if (xhttp.status == 200 || xhttp.status == 200) {
+        console.log("url chamada corretamente" + xhttp.status);
     }
     else
     {
@@ -46,7 +46,7 @@ function checkLogin()  {
    
     // xhttp.overrideMimeType("text/xml");
     //xhttp.responseType = 'document';
-    request.send(sopa);
+    xhttp.send(sopa);
     const text = xhttp.responseText; //API response in XML
     const parser = new DOMParser();
     const xmlDOM = parser.parseFromString(text,"text/xml");
