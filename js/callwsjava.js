@@ -15,11 +15,12 @@ function checkLogin()  {
     const xhttp = new XMLHttpRequest();
     //xhttp.setRequestHeader("Content-Type: application/xml", "Authorization: Basic //AuthKey");
     xhttp.open('POST', url, false);
+    xhttp.setRequestHeader('Content-Type', 'text/plain');
     //xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=UTF-8");
     //xhttp.timeout = 4000;
     //xhttp.ontimeout = function () { alert("Timed out!!!"); }
    
-    
+    /*
     let headers = new Headers();
 
     headers.append('Content-Type', 'text/plain');
@@ -33,7 +34,7 @@ function checkLogin()  {
     headers.append('GET', 'POST', 'OPTIONS');
     console.log(xhttp.status);
 
-   
+   */
 
     if (xhttp.status == 200 || xhttp.status == 0) {
         console.log("url chamada corretamente" + xhttp.status);
