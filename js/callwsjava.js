@@ -15,15 +15,15 @@ function checkLogin()  {
     const xhttp = new XMLHttpRequest();
     //xhttp.setRequestHeader("Content-Type: application/xml", "Authorization: Basic //AuthKey");
     xhttp.open('POST', url, false);
-    //xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=UTF-8");
+    xhttp.setRequestHeader("Content-type","text/xml; charset=UTF-8")
     //xhttp.timeout = 4000;
     //xhttp.ontimeout = function () { alert("Timed out!!!"); }
    
     
     let headers = new Headers();
 
-    headers.append('Content-Type', 'text/xml');
-    headers.append('Accept', '*/*');
+    headers.append('Content-Type', 'text/xml; charset=UTF-8');
+    headers.append('Accept', '/');
     headers.append('Accept-Encoding', 'gzip, deflate, br');
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Headers', 'DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type');
@@ -36,7 +36,7 @@ function checkLogin()  {
    
 
     if (xhttp.status == 200 || xhttp.status == 0) {
-        console.log("url chamada corretamente" + xhttp.status);
+        console.log("url chamada corretamente" +' '+xhttp.status);
     }
     else
     {
